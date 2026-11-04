@@ -1,0 +1,8 @@
+set term png
+set output "gnu2.png"
+set xrange [-2:2]
+set yrange[-4:4]
+set title "plot different powers of x"
+set xlabel "x values"
+set ylabel "y label"
+plot 2*x lw 1, x**2 lw  1.1, x**3/4   lw 1.2 
