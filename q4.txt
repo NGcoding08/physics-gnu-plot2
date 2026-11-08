@@ -1,0 +1,11 @@
+set term png  
+set output " gnu 4.png"
+undefine f
+set title "Black body radiation"
+set xlabel "x"
+set ylabel "f(x)"
+set sample 800
+f(x,b)=a*x**3/(exp(b**x)-1)
+a=1000
+set xrange[0:2]
+plot f(x,8) lt 1 lc 1 lw 1 title "b=8", f(x,9) lt 2 lc 2 lw 1.1  title "b=9",f(x,10) lt 3 lc 3 lw 1.2 title "b=10"
